@@ -170,7 +170,39 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-4 bg-muted/30">
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="font-heading text-3xl md:text-5xl font-bold text-center mb-4">
+            Наши работы
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 text-lg">
+            Примеры выполненных ремонтов
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { title: 'Восстановление рулевой рейки', alt: 'Ремонт рулевой рейки' },
+              { title: 'Ремонт стартера', alt: 'Восстановленный стартер' },
+              { title: 'Диагностика генератора', alt: 'Проверка генератора' },
+            ].map((work, index) => (
+              <div 
+                key={index}
+                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 animate-scale-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                  <Icon name="Wrench" size={64} className="text-primary/40" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                  <p className="text-white font-medium">{work.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-4xl">
           <h2 className="font-heading text-3xl md:text-5xl font-bold text-center mb-4">
             Свяжитесь с нами
