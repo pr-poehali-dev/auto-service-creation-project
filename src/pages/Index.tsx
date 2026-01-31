@@ -282,7 +282,7 @@ const Index = () => {
                     <Icon name="Mail" className="text-primary mt-1" size={20} />
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-muted-foreground">info@ega-service.ru</p>
+                      <p className="text-muted-foreground">info@egaservice.ru</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
